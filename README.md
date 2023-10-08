@@ -1,13 +1,7 @@
 # Property Finding Helpers
-This package provides an easy way of parsing property offers (with user-specific settings) from the property finding 
-portal "nehnutelnosti.sk" in Slovakia and sending them via e-mail. 
-
-This package is developed by [Zoltan Galaz](http://zoltan.galaz.eu/) who created it while searching for the best 
-property for him, his wife and the kids (in the future) to buy. For more information, please contact the author 
-at <zoltan@galaz.eu>.
 
 * * * * * * * * *
-
+今回は不動産ポータルサイトを開発しました。
 ## Installation
 ```
 git clone git@github.com:zgalaz/property-finding-helpers.git
@@ -49,18 +43,14 @@ pip install .
 |       email.json
 ```
 
-## Use
-The package supports only the watchdog function so far (If needed, the functionality of the helper can be updated/extended). To be able to run the watchdog, please follow these steps:
+## 
 
-1. in `settings/email.json` update the following field(s): *email_address*, *email_password*, *server*, and *port*
-2. in `helpers/watchdog/settings/watchdog.json` update the following field(s): *url* 
-3. run the watchdog: `python run.py --email <receiver@email.com>`
-4. or create a bash script, that can be run periodically via the system's task scheduler, with the following content: `"<local_path>\property-finding-helpers\venv\Scripts\python.exe" <local_path>\property-finding-helpers\run.py --email <receiver@email.com>`
-
-
-## Note
-The package is created for non-commercial use only. It is meant exclusively for personal use with the intention to help anybody to catch the good property offers as soon as possible to be able to find the property he/she dreams of.
+1. settings/email.json ファイルの email_address、email_password、server、および port フィールドを更新します。
+2. helpers/watchdog/settings/watchdog.json ファイルの url フィールドを更新します。
+3. ウォッチドッグを実行します: python run.py --email <receiver@email.com>
+4. または、以下の内容を含む bash スクリプトを作成し、システムのタスクスケジューラーを定期的に実行します。
+このパッケージは、現時点ではウォッチドッグ機能のみをサポートしています（必要に応じて、ヘルパーの機能を更新/拡張することができます）。ウォッチドッグを実行するには、上記の手順に従ってください。
 
 
-# License
-This project is licensed under the terms of the MIT license. For more details, see the **LICENSE** file.
+# ライセンス
+このプロジェクトはMITライセンスの条件の下でライセンスされています。詳細については、LICENSEファイルを参照してください。
